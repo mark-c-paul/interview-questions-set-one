@@ -1,0 +1,92 @@
+<?xml version="1.0"?>
+<project
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.influencehealth.clinical</groupId>
+	<artifactId>interview-questions-set-one</artifactId>
+	<version>1.0.0-SNAPSHOT</version>
+	<name>Interview questions set two</name>
+	<url>http://maven.apache.org</url>
+	<description>Set of programming problems that prospective employees can work.</description>
+	<scm>
+		<connection>scm:git:git@gitlab.medseek.com:connect-sandbox/interview-questions.git</connection>
+		<developerConnection>scm:git:git@gitlab.medseek.com:connect-sandbox/interview-questions.git</developerConnection>
+		<url>https://gitlab.medseek.com/connect-sandbox/interview-questions</url>
+		<tag>HEAD</tag>
+	</scm>
+	<properties>
+		<java.version>1.7</java.version>
+		<junit.version>4.12</junit.version>
+		<maven.compiler.plugin.version>3.3</maven.compiler.plugin.version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<commons.io.version>2.4</commons.io.version>
+		<mysql.connector.java.version>5.1.35</mysql.connector.java.version>
+	</properties>
+	<licenses>
+		<license>
+			<name>Influence Health License</name>
+			<url />
+			<distribution>manual</distribution>
+			<comments />
+		</license>
+	</licenses>
+	<organization>
+		<name>Influence Health</name>
+		<url>http://www.influencehealth.com</url>
+	</organization>
+	<build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<version>${maven.compiler.plugin.version}</version>
+					<configuration>
+						<source>${java.version}</source>
+						<target>${java.version}</target>
+						<compilerVersion>${java.version}</compilerVersion>
+						<encoding>${project.build.sourceEncoding}</encoding>
+						<optimize>true</optimize>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>commons-io</groupId>
+				<artifactId>commons-io</artifactId>
+				<version>${commons.io.version}</version>
+				<scope>compile</scope>
+			</dependency>
+			<dependency>
+				<groupId>mysql</groupId>
+				<artifactId>mysql-connector-java</artifactId>
+				<version>${mysql.connector.java.version}</version>
+				<scope>compile</scope>
+			</dependency>
+			<dependency>
+				<groupId>junit</groupId>
+				<artifactId>junit</artifactId>
+				<version>${junit.version}</version>
+				<scope>test</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+	<dependencies>
+		<dependency>
+			<groupId>commons-io</groupId>
+			<artifactId>commons-io</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+		</dependency>		
+	</dependencies>
+</project>
